@@ -55,6 +55,7 @@
     "@remix-run/node": "^2.4.1",
     "@types/node": "^20.10.6",
     "esbuild": "^0.19.11",
+    "esbuild-plugin-extension": "^0.0.2",
     "fastify": "^4.25.2",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
