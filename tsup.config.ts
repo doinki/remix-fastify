@@ -1,14 +1,14 @@
-import { extension } from "esbuild-plugin-extension";
-import { defineConfig } from "tsup";
+import { extension } from 'esbuild-plugin-extension';
+import { defineConfig } from 'tsup';
 
 export default defineConfig({
   bundle: true,
   clean: true,
   dts: true,
-  entry: ["src/**/*.ts"],
+  entry: ['src/**/*.ts'],
   esbuildPlugins: [extension()],
-  format: ["cjs", "esm"],
+  format: ['cjs', 'esm'],
   sourcemap: true,
-  target: "node18",
+  target: 'node18',
   treeshake: true,
 });
