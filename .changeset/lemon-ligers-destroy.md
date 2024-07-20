@@ -1,5 +1,0 @@
----
-"remix-fastify": patch
----
-
-♻️
