@@ -30,13 +30,14 @@
   },
   "files": [
     "dist",
-    "src"
+    "CHANGELOG.md"
   ],
   "homepage": "https://github.com/doinki/remix-fastify/tree/main",
   "keywords": [
     "remix",
     "fastify"
   ],
+  "packageManager": "pnpm@9.5.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/doinki/remix-fastify.git"
@@ -45,19 +46,26 @@
   "type": "module",
   "scripts": {
     "build": "tsup",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "publint": "publint",
+    "version": "changeset version && pnpm install --lockfile-only",
+    "publish": "pnpm run build && pnpm run publint && changeset publish"
   },
   "peerDependencies": {
     "@remix-run/node": "^2.0.0",
     "fastify": "^4.0.0"
   },
   "devDependencies": {
-    "@remix-run/node": "^2.4.1",
-    "@types/node": "^20.10.6",
-    "esbuild": "^0.19.11",
+    "@changesets/cli": "^2.27.7",
+    "@remix-run/node": "^2.10.3",
+    "@types/node": "^20.14.11",
     "esbuild-plugin-extension": "^0.0.2",
-    "fastify": "^4.25.2",
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.3"
+    "fastify": "^4.28.1",
+    "publint": "^0.2.9",
+    "tsup": "^8.2.0",
+    "typescript": "^5.5.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
